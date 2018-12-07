@@ -1,0 +1,73 @@
+﻿html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+table {
+    width: 100%;
+    height: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #A9A9A9;
+}
+
+table {
+    table-layout: fixed;
+    height: auto;
+}
+
+    table.head {
+        width: calc(100% - 17px);
+    }
+
+    table.body {
+        width: 100%;
+    }
+
+div.scroll-head {
+    /*background-color: #F0F0F0;*/
+}
+
+div.scroll-body table, div.scroll-body tbody tr:first-child, div.scroll-body tbody tr:first-child td {
+    border-top: 0;
+}
+
+div.scroll-body {
+    /*background-color: #F0F0F0;*/
+    flex-grow: 1;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+    div.scroll-body table {
+        border-top: 0;
+    }
+
+    div.scroll-body thead, div.scroll-body thead tr, div.scroll-body thead th {
+        max-height: 0;
+        min-height: 0;
+        height: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        border: 0;
+        outline: 0;
+    }
+
+tr {
+    min-height: 20px;
+}
+
+td, th {
+    text-overflow: clip;
+    white-space: nowrap;
+    overflow: hidden;
+}
